@@ -1,0 +1,6 @@
+Django==4.0
+djangorestframework==3.13.1
+mysqlclient==2.1.0
+macaddress==22.0.4
+django-macaddress==1.8.0
+requests=2.27.1

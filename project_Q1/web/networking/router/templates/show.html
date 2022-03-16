@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Router Records</title>  
+	 {% load static %}	 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>SApId</th>  
+        <th> Hostname</th>  
+        <th> Loopback</th>  
+        <th> Contact</th>  
+        <th></th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for router in routers %}  
+    <tr>  
+        <td>{{ router.Sapid }}</td>  
+        <td>{{ router.Hostname }}</td>  
+        <td>{{ router.Loopback }}</td>  
+        <td>{{ router.econtact }}</td>  
+        <td>  
+            <a href="/edit/{{ router.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+            <a href="/delete/{{ router.id }}">Delete</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/router" class="btn btn-primary">Add New Record</a></center>  
+</body>  
+</html>  
